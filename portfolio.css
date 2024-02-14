@@ -140,6 +140,8 @@ section{
     flex-direction: row;
     align-items: center;
     background: #222;
+    height: 100vh;
+    width: 100vw;
 }
 .homeContent{
     display: flex;
@@ -225,7 +227,7 @@ section{
    height: 70vh;
    position: absolute;
    bottom: 0;
-   left: 50%;
+   right: 4%;
    transition: transform 0.5s ease-in-out;
    animation: slideInleft 0.6s ease-in-out;
 }
@@ -235,86 +237,43 @@ section{
 .shape{
     height: 85vh;
     position: absolute;
-    top: 20%;
-    left: 48%;
+    top: 15%;
+    right: 4%;
     transition: transform 0.5s ease-in-out;
     animation: slideInbottom 0.6s ease-in-out;
 
 }
 /*breakpoints*/
-@media (max-width: 896px){
+@media (max-width: 1038px){
     header{
         padding: 2rem 3%;
-    }
-    .logo{
-        font-size: 2.5rem;
-    }
-    .navbar a{
-        font-size: 1.5rem;
-        margin-right: 2rem;
-    }
-    .homeContent h3{
-         font-size: 2rem;
-    }
-    .homeContent h1{
-        font-size: 2.5rem;
-    }
-    .homeContent h1 span{
-        font-size: 3rem;
-    }
-    .homeContent p{
-        font-size: 1.4rem;
-    }
-    .homeContent .socialmedia a{
-        width: 3.5rem;
-        height: 3.5rem;
-        margin-top: 3rem;
-    }
-    .smplatforms{
-        font-size: 1.75rem;
     }
     .mypic{
         height: 60vh;
     }
     .shape{
         height: 75vh;
-        top: 30%;
+        top: 25%;
     }
 }
-@media (max-width:725px) {
+@media (max-width: 942px){
+    .mypic{
+        visibility: hidden;
+    }
+    .shape{
+       visibility: hidden;
+    }
+}
+@media (max-width:768px) {
+    header{
+        padding: 2rem 3%;
+    }
     .mypic{
         visibility: hidden;
     }
     .shape{
         visibility: hidden;
     }
-    .homesection.imageContent{
-        visibility: hidden;
-    }
-    .homesection{
-        flex-direction: column;
-        justify-content: center;
-    }
-    .homeContent h3{
-        font-size: 3rem;
-   }
-   .homeContent h1{
-       font-size: 3rem;
-   }
-   .homeContent h1 span{
-       font-size: 4rem;
-   }
-   .homeContent p{
-       font-size: 2rem;
-   }
-   .homeContent .socialmedia a{
-    width: 4rem;
-    height: 4rem;
-    margin-top: 4rem;
-   }
-   .logo{
-    font-size: 2.5rem;
-   }
    .navbar{
     position: absolute;
     top: 100%;
