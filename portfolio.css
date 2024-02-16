@@ -244,25 +244,35 @@ section{
 
 }
 /*breakpoints*/
-@media (max-width: 1038px){
+@media (max-width: 1150px){
     header{
         padding: 2rem 3%;
     }
     .mypic{
-        height: 60vh;
+        height: 65vh;
+        right: 3%;
     }
     .shape{
         height: 75vh;
         top: 25%;
+        right: 3%;
     }
 }
-@media (max-width: 942px){
+@media (max-width: 1032px){
     .mypic{
         visibility: hidden;
     }
     .shape{
        visibility: hidden;
     }
+    .homesection{
+       flex-direction: column;
+       justify-content: center;
+    }
+    .homeContent{
+        max-width: fit-content;
+    }
+    
 }
 @media (max-width:768px) {
     header{
@@ -309,5 +319,17 @@ section{
    .clicked{
     height: auto;
    }
+}
+@media (max-width: 450px){
+    
+    .professions{
+        height: 2rem;
+        width:30rem;
+    }
+    .professions span{
+        font-size: 2rem;
+        top: 18px;
+    }
+    
 }
 
