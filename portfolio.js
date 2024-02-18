@@ -14,3 +14,14 @@ menuicon.onclick=function(){
 
     menuicon.classList=isOpen?'fa-solid fa-xmark':'fa-solid fa-bars';
 }
+let prev=document.getElementById('prev');
+let next=document.getElementById('next');
+let slider=document.querySelector('.slider');
+next.onclick=()=>{
+    let slides=document.querySelectorAll('.slides');
+    slider.appendChild(slides[0]);
+};
+prev.onclick=()=>{
+    let slides=document.querySelectorAll('.slides');
+    slider.prepend(slides[slides.length-1]);
+};

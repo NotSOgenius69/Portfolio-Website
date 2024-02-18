@@ -28,6 +28,7 @@
     --bg-color: #fdfdfd;
     --shadow-color:rgba(0,0,0,0.2);
     --main-color:#00bbf9;
+    --num:0;
 }
 html{
     font-size: 62.5%;
@@ -63,6 +64,14 @@ body{
         transform: translate(0);
     }
 }
+@keyframes slideInUp{
+    from{
+        transform: translateY(-50%);
+    }
+    to{
+        transform: translate(0);
+    }
+}
 @keyframes spinwords{
     10%{
         transform: translateY(-112%);
@@ -81,6 +90,24 @@ body{
     }
     100%{
         transform: translateY(-306%);
+    }
+}
+@keyframes animateDot{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(calc(3.6deg * ));
+    }
+}
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }
 /*keyframes*/
@@ -193,13 +220,13 @@ section{
     white-space: nowrap;
     animation: spinwords 5s infinite;
 }
-.homeContent .socialmedia{
+.socialmedia{
     display: inline-flex;
     justify-content: left;
     align-items: center;
     animation: slideInbottom 0.6s ease-in-out;
 }
-.homeContent .socialmedia a{
+.socialmedia a{
     position: relative;
     margin-right: 1.2rem;
     margin-top: 4rem;
@@ -275,12 +302,12 @@ section{
     align-items: center;
     margin: 4.8rem;
     max-width: 65rem;
-    animation: slideInleft 0.6s ease-in-out;
 }
 .aboutContent h1{
     font-size: 4rem;
     color: white;
     margin-bottom: 8rem;
+    animation:slideInUp 1s ease;
 }
 .aboutContent h1 span{
     color: var(--main-color);
@@ -290,6 +317,7 @@ section{
     color: white;
     font-family: nexa;
     text-align: center;
+    animation:slideInbottom 1s ease;
 }
 /*about*/
 /*Education*/
@@ -304,10 +332,12 @@ section{
     font-size: 4rem;
     color: var(--main-color);
     margin: 6rem;
+    animation: slideInUp 1s ease;
 }
 .eduContents{
     padding: 0 30px;
     border-left: 2px solid white;
+    animation: slideInRight 1s ease;
 }
 .education .eduContents .box{
     position: relative;
@@ -330,7 +360,6 @@ section{
     right: calc(100% + 22px);
 }
 .education .eduContents .box:hover{
-    box-shadow: 0px 3px 12px 0px var(--main-color);
 	border: 1px solid transparent;
     transform: scale(1.1);
 }
@@ -379,6 +408,289 @@ section{
     color: var(--main-color);
 }
 /*Education*/
+/*Skills*/
+.skillsSection{
+    background: #414141;
+   border-radius: 2%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height: auto;
+   width: 100vw;
+}
+.skillsSection h1{
+     font-size: 4rem;
+     color: white;
+     margin-bottom: 1rem;
+     animation: slideInUp 1s ease;
+}
+.skillsSection .skillcards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 5rem;
+}
+.skillsSection .card{
+    position: relative;
+    width: 190px;
+    height: 220px;
+    background: #222;
+    border: 2px solid white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    box-shadow: 10px 10px 12px 0px rgba(0, 0 , 0, 0.3);
+    animation: slideInRight 1s ease;
+}
+.skillsSection .card:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 3px 12px 0px var(--main-color);
+}
+.skillsSection .card .percentage{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+.skillsSection .card .percentage svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+}
+.skillsSection .card .percentage svg circle{
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke-width: 2;
+    stroke: black ;
+    transform: translate(5px,5px);
+}
+.skillsSection .card .percentage svg circle:nth-child(2){
+    stroke: var(--skillcolor);
+    stroke-dasharray: 440;
+    stroke-dashoffset: calc(440 - (var(--num)/100)*440);
+    opacity: 0;
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 2s;
+}
+.dot{
+    position: absolute;
+    inset: 5px;
+    z-index: 10;
+    transform: rotate(calc(3.6deg * var(--num)));
+    animation: animateDot 2s linear forwards;
+}
+.dot::before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background:var(--skillcolor);
+    box-shadow: 0 0 10px var(--skillcolor),0 0 30px var(--skillcolor);
+}
+.percentText{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 2s;
+}
+.percentText h2{
+    font-size: 3rem;
+    color: white;
+}
+.percentText h3{
+    font-size: 1.5rem;
+    color:var(--skillcolor);
+    letter-spacing: 1.5px;
+}
+/*Skills*/
+/*My Works*/
+.myworksSection{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.myworksSection h1{
+    font-size: 4rem;
+    color: var(--main-color);
+    margin-bottom: 20px;
+    animation: slideInUp 1s ease;
+}
+.slider{
+    position: relative;
+    width: 300px;
+    height: 450px;
+    background: #414141;
+    border: 1px solid white;
+    border-radius: 20px;
+    margin: 20px;
+    animation: slideInleft 1s ease;
+}
+.slider .slides{
+    position: absolute;
+    top: 75%;
+    transform: translateY(-50%);
+    width: 150px;
+    height: 200px;
+    border: 1px solid white;
+    background: var(--img);
+    background-position: center;
+    background-size: cover;
+    transition: 0.5s;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 10px rgba(0, 0 , 0, 0.2);
+}
+.slider .slides:nth-child(1),.slider .slides:nth-child(2){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(0);
+    background-size: cover;
+    
+}
+.slider .slides:nth-child(3){
+    left: calc(50% + 120px);
+    background-size: cover;
+}
+.slider .slides:nth-child(4){
+    left: calc(50% + 290px);
+    background-size: cover;
+}
+.slider .slides:nth-child(5){
+    left: calc(50% + 460px);
+    background-size: cover;
+}
+.slider .slides:nth-child(6){
+    left: calc(50% + 630px);
+    background-size: cover;
+}
+.buttons{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    margin: 20px;
+    color: white;
+    animation: slideInbottom 1s ease;
+}
+#prev:hover{
+    color: var(--main-color);
+}
+#next:hover{
+    color: var(--main-color);
+}
+/*My Works*/
+/*Contact Me*/
+.contactSection{
+    background: #414141;
+    border-radius: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+.contactTitle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: slideInUp 1s ease;
+    margin: 5rem;
+}
+.contactSection h4{
+    color: white;
+    font-size: 1.5rem;
+}
+.contactSection h1{
+    font-size: 4rem;
+    color: white;
+}
+.contactSection h1 span{
+    font-size: 4rem;
+    color: var(--main-color);
+}
+.contactContents{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.contactdetails{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+}
+.contactdetails .infobox{
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    background: #222;
+    padding: 20px;
+    border-radius: 30px;
+}
+.contactdetails .infobox:hover{
+    background: transparent;
+    border: 2px solid white;
+}
+.contactdetails .infobox .fa-solid{
+    font-size: 2rem;
+}
+.contactdetails .infobox .contactText{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    justify-content: center;
+    align-items: flex-start;
+}
+.contactdetails .infobox .contactText h2{
+    color: var(--main-color);
+}
+/*Contact Me*/
+/*footer*/
+footer{
+    width: 100%;
+    padding: 2rem 7%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+h3{
+    font-size: 1.5rem;
+    color: white;
+}
+/*footer*/
 /*breakpoints*/
 @media (max-width: 1150px){
     header{
