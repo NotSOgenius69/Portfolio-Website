@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="portfolio.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://unpkg.com/boxicons@2.1.3/dist/boxicons.js"></script>
     <script src="https://kit.fontawesome.com/fc988a088a.js" crossorigin="anonymous"></script>
     <title>Tanjim Portfolio</title>
 </head>
+
 <body>
     <header>
         <!--navigation bar-->
@@ -15,34 +17,32 @@
         <i class="fa-solid fa-bars" style="color: #ffffff;" id="menuicon"></i>
        <nav class="navbar">
         <ul>
-        <li><a href="#" class="home">Home</a></li>
-        <li><a href="#" class="about">About</a></li>
-        <li><a href="#" class="education">Education</a></li>
-        <li><a href="#" class="skills">Skills</a></li>
-        <li><a href="#" class="myworks">My Works</a></li>
-        <li><a href="#" class="contact">Contact Me</a></li>
+        <li><a href="#homesec" class="home selected">Home</a></li>
+        <li><a href="#aboutsec" class="about">About</a></li>
+        <li><a href="#edusec" class="education">Education</a></li>
+        <li><a href="#skillsec" class="skills">Skills</a></li>
+        <li><a href="#worksec" class="myworks">My Works</a></li>
+        <li><a href="#contactsec" class="contact">Contact Me</a></li>
     </ul>
     </nav>
     </header>
 
     <!--home-->
-    <section class="homesection">
+    <section class="homesection" id="homesec">
         <!--Home-->
         <div class="homeContent">
             <div class="textContent">
             <h3>Kon'nichiwa...</h3>
             <h1>I'm <span>Md.Tanjimul Hasan</span></h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Vitae voluptate, recusandae minima odit nisi deserunt alias nobis
-                nam debitis pariatur repellat error,
-                similique architecto ratione reprehenderit 
-                deleniti fugit magni dolorem?</p>
+            <p>A diligent CS Undergrad student currently pursuing my studies at Khulna University of Engineering and Technology.
+               Constantly driven by curiosity, I thrive on exploring new fields and learning something new every day.
+            </p>
             </div>
             <div class="socialmedia">
-                    <a href="#" id="bx1"><i class="fa-brands fa-facebook-f smplatforms"  id="fb"></i></a>
-                    <a href="#" id="bx2"><i class="fa-brands fa-x-twitter smplatforms"  id="X"></i></a>
-                    <a href="#" id="bx3"><i class="fa-brands fa-github smplatforms"  id="gh"></i></a>
-                    <a href="#" id="bx4"><i class="fa-brands fa-linkedin-in smplatforms"  id="lin"></i></a>
+                    <a href="https://www.facebook.com/tanjimhassan.raj" id="bx1"><i class="fa-brands fa-facebook-f smplatforms"  id="fb"></i></a>
+                    <a href="https://twitter.com/TANXAN1" id="bx2"><i class="fa-brands fa-x-twitter smplatforms"  id="X"></i></a>
+                    <a href="https://github.com/NotSOgenius69" id="bx3"><i class="fa-brands fa-github smplatforms"  id="gh"></i></a>
+                    <a href="https://www.linkedin.com/in/tanxan-raxa-71309b22a" id="bx4"><i class="fa-brands fa-linkedin-in smplatforms"  id="lin"></i></a>
             </div>
             <div class="professions">
                 <span>Coder</span>
@@ -57,21 +57,22 @@
     </section>
 
     <!--About-->
-    <section class="aboutSection">
+    <section class="aboutSection" id="aboutsec">
         <div class="aboutImg">
             <img src="aboutpic.jpeg" alt="pic" class="aboutpic">
         </div>
         <div class="aboutContent">
             <h1>About <span>Me</span></h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Quaerat officia dicta modi ipsum nam alias magnam fugit ratione!
-            Ut iusto quaerat magni
-            qui maiores nulla dicta inventore impedit quas aliquid.</p>
+            <p>I am a student at Khulna University of Engineering and Technology doing my Bachelor's in Computer Science.
+            I love problem solving and constantly immerse myself in competitive programming to sharpen my problem solving skills and 
+            tackle new algorithmic puzzles.Beyond the realm of coding, I also find joy in unleashing my creativity through graphics designing.
+            My favorite pastimes are watching anime and playing games.I love to explore new fields and learn new things everyday.
+            </p>
         </div>
     </section>
 
      <!--Education-->
-    <section class="education">
+    <section class="education" id="edusec">
        <div class="edutitle">
 		<h2>EDUCATION</h2>
        </div>
@@ -115,7 +116,7 @@
     </section>
 
     <!--Skills-->
-    <section class="skillsSection">
+    <section class="skillsSection" id="skillsec">
             <h1>SKILLS</h1>
         <div class="skillcards">
         <div class="card">
@@ -187,7 +188,7 @@
     </section>
 
     <!--My works-->
-    <section class="myworksSection">
+    <section class="myworksSection" id="worksec">
         <h1>MY WORKS</h1>
         <div class="myworksContent">
             <div class="slider">
@@ -227,7 +228,7 @@
     </section>
 
      <!--Contact Me-->
-    <section class="contactSection">
+    <section class="contactSection" id="contactsec">
         <div class="contactTitle">
          <h4>Get in touch</h4>
          <h1>Contact <span>Me</span></h1>
@@ -256,40 +257,20 @@
                     </div>
                 </div>
             </div>
-            <div class="messagebox">
-                    <div class="text">Message me</div>
-                    <form action="#">
-                        <div class="fields">
-                            <div class="field name">
-                                <input type="text" placeholder="Name" id="name" required="">
-                            </div>
-                            <div class="field email">
-                                <input type="email" placeholder="Email" id="email" required="">
-                            </div>
-                        </div>
-                        <div class="field">
-                            <input type="text" placeholder="Subject" id="subject" required="">
-                        </div>
-                        <div class="field textarea">
-                            <textarea cols="30" rows="10" placeholder="Message.." id="body" required=""></textarea>
-                        </div>
-                        <div class="btn__container__contact">
-                            <button class="btn btn-color-1" type="submit" onclick="sendEmail()">Send message</button>
-                        </div>
-                    </form>
-                </div>
+            <div class="messagebox"></div>
             </div>
         </div>
     </section>
     <footer>
         <div class="socialmedia">
-            <a href="#" id="bx1"><i class="fa-brands fa-facebook-f smplatforms"  id="fb"></i></a>
-            <a href="#" id="bx2"><i class="fa-brands fa-x-twitter smplatforms"  id="X"></i></a>
-            <a href="#" id="bx3"><i class="fa-brands fa-github smplatforms"  id="gh"></i></a>
-            <a href="#" id="bx4"><i class="fa-brands fa-linkedin-in smplatforms"  id="lin"></i></a>
+            <a href="https://www.facebook.com/tanjimhassan.raj" id="bx1"><i class="fa-brands fa-facebook-f smplatforms"  id="fb"></i></a>
+            <a href="https://twitter.com/TANXAN1" id="bx2"><i class="fa-brands fa-x-twitter smplatforms"  id="X"></i></a>
+            <a href="https://github.com/NotSOgenius69" id="bx3"><i class="fa-brands fa-github smplatforms"  id="gh"></i></a>
+            <a href="https://www.linkedin.com/in/tanxan-raxa-71309b22a" id="bx4"><i class="fa-brands fa-linkedin-in smplatforms"  id="lin"></i></a>
     </div>
-        <h3>Copyright © 2024 Tanjimul Hasan.All Rights Reserved</h3>
+        <h3>Copyright © 2024 Tanjimul Hasan.</h3><h3>All Rights Reserved</h3>
     </footer>
+    
     <script src="portfolio.js"></script>
 </body>
 </html>
