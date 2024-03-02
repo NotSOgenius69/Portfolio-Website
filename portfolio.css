@@ -693,7 +693,7 @@ section{
     border-left: 2px white solid;
 }
 .input{
-    width: 20vw;
+    min-width: 20vw;
     height: 7vh;
     padding-left: 25px;
     border-radius: 50px;
@@ -818,6 +818,13 @@ h3{
   }
   .education .eduContents .box::before{
     top: -6.8%;
+}
+.contactContents{
+    flex-direction: column;
+    gap: 5px;
+}
+.message-form{
+    border: 0;
 }
 }
 @media (max-width: 450px){
