@@ -90,7 +90,7 @@ ScrollReveal({
      delay: 100,
 });
 
-ScrollReveal().reveal('.textContent, .aboutpic',{origin:'left'});
+ScrollReveal().reveal('.textContent, .aboutpic, .messagebox',{origin:'left'});
 ScrollReveal().reveal('.socialmedia, .eduContents, .slider, .contactdetails, .skillsSection .card',{origin:'right'});
 ScrollReveal().reveal('.skillsSection .card',{duration:500});
 ScrollReveal().reveal('.aboutContent h1, .edutitle h2, .skillsSection h1, .myworksSection h1, .contactTitle',{origin:'top'});

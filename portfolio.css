@@ -612,7 +612,7 @@ section{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: auto;
     width: 100vw;
 }
 .contactTitle{
@@ -621,7 +621,7 @@ section{
     justify-content: center;
     align-items: center;
     /*animation: slideInUp 1s ease;*/
-    margin: 5rem;
+    margin: 2rem;
 }
 .contactSection h4{
     color: white;
@@ -645,8 +645,9 @@ section{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    justify-content: center;
+    justify-content: start;
     align-items: flex-start;
+    padding: 8rem;
 }
 .contactdetails .infobox{
     display: flex;
@@ -674,6 +675,45 @@ section{
 }
 .contactdetails .infobox .contactText h2{
     color: var(--main-color);
+}
+.message-form h2{
+    font-size: 2rem;
+    color: white;
+}
+.message-form h2 span{
+    color: var(--main-color);
+}
+.message-form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+    justify-content: center;
+    padding: 8rem;
+    border-left: 2px white solid;
+}
+.input{
+    width: 20vw;
+    height: 7vh;
+    padding-left: 25px;
+    border-radius: 50px;
+    color: #666;
+}
+#textarea{
+    height: 25vh;
+    resize: none;
+    border-radius: 20px;
+    padding-left: 25px;
+    padding-top: 25px;
+}
+.submitButton{
+    padding: 15px;
+    width: 20vh;
+    border-radius: 50px;
+    background: #00bbf9;
+    color: white;
+    font-weight: 500;
+    font-size: 1.5rem;
 }
 /*Contact Me*/
 /*footer*/
